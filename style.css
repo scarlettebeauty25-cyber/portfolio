@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  background: radial-gradient(circle at top, #800020, #0f0f0f 70%);
+  color: white;
+}
+/* NAVBAR */
+nav {
+  width: 100%;
+  padding: 30px 50px; /* makes it thicker */
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center; /* centers content */
+}
+
+/* container now spreads wider */
+.nav-container {
+  width: 100%;
+  max-width: 1200px; /* controls how wide content can go */
+  display: flex;
+  justify-content: center;
+}
+
+/* links */
+.nav-links {
+  display: flex;
+  gap: 60px; /* more spacing = looks wider */
+}
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #800020;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* PROJECTS */
+.projects {
+  padding: 60px 10%;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  /* CARD LAYOUT FIX */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* BUTTON STYLE */
+.project-btn {
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  background: #800020;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+/* HOVER EFFECT */
+.project-btn:hover {
+  background: #a0002a;
+  transform: scale(1.05);
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card p {
+  color: #aaa;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff4d6d;
+  text-decoration: none;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+}
+/* FADE-IN ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BUTTON HOVER EFFECT */
+.btn:hover {
+  background: #a0002a;
+  transform: scale(1.05);
+}
+
+/* CARD HOVER UPGRADE */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(128, 0, 32, 0.3);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}

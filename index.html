@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iqra | Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="fade-in">
+  <div class="nav-container">
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <h1>I build modern websites for brands</h1>
+    <p>Helping small businesses grow with clean, aesthetic websites</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects fade-in">
+    <div class="grid">
+
+  <!-- PROJECT 1 -->
+  <div class="card fade-in">
+    <img src="Screenshot 2026-06-16 161853.png" alt="Beauty Salon Website">
+     <img src="Screenshot 2026-06-16 161912.png" alt="Beauty Salon Website">
+      <img src="Screenshot 2026-06-16 161931.png" alt="Beauty Salon Website">
+    <h3>Beauty Salon Website</h3>
+    <p>Modern eCommerce store with clean UI</p>
+   <a href="https://your-link.com" target="_blank" class="project-btn">
+  View Project
+</a>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="card fade-in">
+    <img src="Screenshot 2026-06-16 172713.png" alt="NAIL Beauty Website">
+     <img src="Screenshot 2026-06-16 172734.png" alt="NAIL Beauty Website">
+      <img src="Screenshot 2026-06-16 172713.png" alt="NAIL Beauty Website">
+    <h3>Beauty Store</h3>
+    <p>Elegant design for skincare & nail products</p>
+    <a href="https://scarlette-6249.myshopify.com/" target="_blank" class="project-btn">
+  View Project
+</a>
+    
+  </div>
+
+
+</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact fade-in">
+    <h2>Let's Work Together</h2>
+    <p>Have a project in mind? Message me directly</p>
+
+    <a href="https://wa.me/00923241272199" target="_blank" class="whatsapp-btn">
+      💬 Chat on WhatsApp
+    </a>
+  </section>
+
+  <!-- ANIMATION SCRIPT -->
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+
+    function showOnScroll() {
+      elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (position < screenHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showOnScroll);
+    showOnScroll();
+  </script>
+
+</body>
+</html>
