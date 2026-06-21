@@ -10,17 +10,20 @@
 
   <!-- NAVBAR -->
   <nav class="fade-in">
-  <div class="nav-container">
-    <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#designs">Designs</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
   <!-- HERO -->
   <section class="hero fade-in">
-    <h1>I build modern websites for brands</h1>
-    <p>Helping small businesses grow with clean, aesthetic websites</p>
+    <h1>I build modern websites for brands</h1><br>
+      <h2>Also serving skills for Social Media Marketing</h2>
+    <p>Helping small businesses grow with clean, aesthetic websites and quality promotions</p>
     <a href="#projects" class="btn">View My Work</a>
   </section>
 
@@ -28,34 +31,84 @@
   <section id="projects" class="projects fade-in">
     <div class="grid">
 
-  <!-- PROJECT 1 -->
-  <div class="card fade-in">
-    <img src="Screenshot 2026-06-16 161853.png" alt="Beauty Salon Website">
-     <img src="Screenshot 2026-06-16 161912.png" alt="Beauty Salon Website">
-      <img src="Screenshot 2026-06-16 161931.png" alt="Beauty Salon Website">
-    <h3>Beauty Salon Website</h3>
-    <p>Modern eCommerce store with clean UI</p>
-    <!-- update1 -->
-   <a href="https://sonias-makeup-salon.base44.app/" target="_blank" class="project-btn">
-  View Project
-</a>
-  </div>
+      <!-- PROJECT 1 -->
+      <div class="card fade-in">
+        <img src="Screenshot 2026-06-16 161853.png">
+        <p class="img-name">Homepage View</p>
 
-  <!-- PROJECT 2 -->
-  <div class="card fade-in">
-    <img src="Screenshot 2026-06-16 172713.png" alt="NAIL Beauty Website">
-     <img src="Screenshot 2026-06-16 172734.png" alt="NAIL Beauty Website">
-      <img src="Screenshot 2026-06-16 172713.png" alt="NAIL Beauty Website">
-    <h3>Beauty Store</h3>
-    <p>Elegant design for skincare & nail products</p>
-    <a href="https://scarlette-6249.myshopify.com/" target="_blank" class="project-btn">
-  View Project
-</a>
-    
-  </div>
+        <img src="Screenshot 2026-06-16 161912.png">
+        <p class="img-name">Services Section</p>
 
+        <img src="Screenshot 2026-06-16 161931.png">
+        <p class="img-name">Contact / Footer</p>
 
-</div>
+        <h3>Beauty Salon Website</h3>
+        <p>Modern eCommerce store with clean UI</p>
+
+        <a href="https://sonias-makeup-salon.base44.app/" target="_blank" class="project-btn">
+          View Project
+        </a>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="card fade-in">
+        <img src="Screenshot 2026-06-16 172713.png">
+        <p class="img-name">Landing Page</p>
+
+        <img src="Screenshot 2026-06-16 172734.png">
+        <p class="img-name">Product Section</p>
+
+        <img src="Screenshot 2026-06-16 172713.png">
+        <p class="img-name">Shop Layout</p>
+
+        <h3>Beauty Store</h3>
+        <p>Elegant design for skincare & nail products</p>
+
+        <a href="https://scarlette-6249.myshopify.com/" target="_blank" class="project-btn">
+          View Project
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOCIAL MEDIA DESIGNS -->
+  <section id="designs" class="projects fade-in">
+    <h2>Social Media Designs</h2>
+
+    <div class="grid">
+
+      <div class="card fade-in">
+        <img src="fashion-beauty-salon-post.png">
+        <p class="img-name">Beauty Salon Post</p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="Services.png">
+        <p class="img-name">CLINIC services</p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="healthcare.png">
+        <p class="img-name">CLINIC OPENINGS</p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="gym-fitness-post.png">
+        <p class="img-name">Fitness Post</p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="restaurant-bbq-post.png">
+        <p class="img-name">Restaurant OPENINGS</p>
+      </div>
+
+      <div class="card fade-in">
+        <img src="image_2.png">
+        <p class="img-name">MEDICAL REMINDERS</p>
+      </div>
+
+    </div>
   </section>
 
   <!-- CONTACT -->
@@ -68,7 +121,13 @@
     </a>
   </section>
 
-  <!-- ANIMATION SCRIPT -->
+  <!-- IMAGE MODAL -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <!-- FADE IN SCRIPT -->
   <script>
     const elements = document.querySelectorAll('.fade-in');
 
@@ -85,6 +144,30 @@
 
     window.addEventListener('scroll', showOnScroll);
     showOnScroll();
+  </script>
+
+  <!-- MODAL SCRIPT -->
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".card img").forEach(img => {
+      img.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+      });
+    });
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    modal.onclick = function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    }
   </script>
 
 </body>
